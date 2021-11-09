@@ -39,7 +39,6 @@ section {
   min-height: 100vh;
   width: 50%;
   margin: auto;
-  perspective: 1200px;
 }
 
 .box {
