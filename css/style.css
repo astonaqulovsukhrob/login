@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+*:focus {
+  outline: 4px dotted #2ae2e2;
+  outline-offset: 3px;
+}
+
+main {
+  background: linear-gradient(
+    -200deg,
+    #a18cd1 0%,
+    #fbc2eb 50%,
+    #fad0c4 50%,
+    #ff9a9e 100%
+  );
+  filter: hue-rotate(120deg);
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 50%;
+  margin: auto;
+  perspective: 1200px;
+}
+
+.box {
+  transform-style: preserve-3d;
+  position: relative;
+  padding: 2.5rem;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 5px 80px rgba(163, 35, 35, 0.1);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.form {
+  width: 100%;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.form-input_user,
+.form-input_password {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgba(138, 138, 138, 0.1);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.form-input_user input,
+.form-input_password input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  letter-spacing: 0.75px;
+  background-color: transparent;
+}
+
+.login input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  border: 2px solid rgba(138, 138, 138, 0.1);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+
+.login input:hover {
+  background-color: white;
+}
+
+.login input:active {
+  background-color: #aaa;
+  outline: none;
+}
